@@ -77,3 +77,12 @@ pipeline {
 }
 ////////////////////////////////////////////////////////
 ngrok config add-authtoken <your_token>
+
+
+
+****************maven project *************
+
+FROM tomcat:9.0
+COPY target/*.war /usr/local/tomcat/webapps/
+EXPOSE 7007
+CMD ["catalina.sh","ru
